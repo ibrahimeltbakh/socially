@@ -42,7 +42,7 @@ const DesktopNavbar = async () => {
           <UserButton />
         </>
       ) : (
-        <SignInButton mode="modal">
+        <SignInButton mode="modal" fallbackRedirectUrl="/">
           <Button>Sign in</Button>
         </SignInButton>
       )}

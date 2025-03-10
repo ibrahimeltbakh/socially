@@ -96,7 +96,7 @@ const MobileNavbar = () => {
                 </SignOutButton>
               </>
             ) : (
-              <SignInButton mode="modal">
+              <SignInButton mode="modal" fallbackRedirectUrl="/">
                 <Button variant="default" className="w-full">
                   Sign In
                 </Button>
