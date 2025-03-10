@@ -10,11 +10,13 @@ export async function syncUser() {
     const user = await currentUser();
 
     if (!userId || !user) return;
+
     const existingUser = await prisma.user.findUnique({
       where: {
         clerkId: userId,
       },
     });
+
     if (existingUser) return existingUser;
 
     const dbUser = await prisma.user.create({
@@ -27,9 +29,10 @@ export async function syncUser() {
         image: user.imageUrl,
       },
     });
+
     return dbUser;
   } catch (error) {
-    console.log("Error in SyncUser", error);
+    console.log("Error in syncUser", error);
   }
 }
 
@@ -49,6 +52,7 @@ export async function getUserByClerkId(clerkId: string) {
     },
   });
 }
+
 export async function getDbUserId() {
   const { userId: clerkId } = await auth();
   if (!clerkId) return null;
@@ -59,6 +63,7 @@ export async function getDbUserId() {
 
   return user.id;
 }
+
 export async function getRandomUsers() {
   try {
     const userId = await getDbUserId();
