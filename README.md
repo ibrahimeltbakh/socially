@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Socially – Full Stack Social Media Platform
 
-## Getting Started
+[Live Demo](https://socially-six-khaki.vercel.app/) • [GitHub Repository](https://github.com/ibrahimeltbakh/socially)
 
-First, run the development server:
+Socially is a full-stack social media platform built with Next.js and Tailwind CSS, featuring server-side rendering, authentication, and database integration. Users can create accounts, post content, follow others, and interact with posts through likes and comments.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### User Features
+- **Authentication**: Sign up, login, and secure authentication using Clerk.
+- **User Profiles**: Edit profile, upload avatar, and view other users’ profiles.
+- **Posts & Interactions**: Create, like, comment, and share posts.
+- **Follow System**: Follow/unfollow other users.
+- **Notifications**: Receive updates on post interactions.
+- **Responsive Design**: Fully responsive UI for mobile and desktop.
+- **Dark & Light Modes**: Switch between themes.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech Stack
+- **Frontend**: Next.js, Tailwind CSS, Next Themes
+- **Backend & Database**: Prisma, Neon DB
+- **Authentication**: Clerk
+- **File Uploads**: UploadThing
+- **UI Components**: Radix UI, Lucide React
+- **State & Utilities**: Tailwind Merge, Class Variance Authority
+- **Notifications**: React Hot Toast
+- **Type Safety**: TypeScript
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
+   ```bash
+      git clone https://github.com/ibrahimeltbakh/socially
+2.Install dependencies:
+  npm install
+3.Run the development server
+  npm run dev
+Open http://localhost:3000
+ to view the app.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Home / Feed – Main feed with posts from followed users.
 
-## Deploy on Vercel
+Profile – User profile management.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Post Management – Create, edit, delete posts.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Follow System – Manage following/followers.
+
+Admin Panel – User and content moderation.
+
+Notes
+
+Project marked as private repository.
+
+Environment variables are required for Clerk authentication and Prisma/Neon DB connection.
+
+Fully server-side rendered for better performance and SEO.
+
+   ```bash
+   git clone https://github.com/ibrahimeltbakh/socially
